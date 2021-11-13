@@ -8,7 +8,11 @@
     "node": "14.17.3"
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.7.0",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
     "bootstrap": "^5.0.2",
+    "framer-motion": "^4.1.17",
     "ipfs-http-client": "^51.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
