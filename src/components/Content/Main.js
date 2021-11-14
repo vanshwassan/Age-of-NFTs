@@ -10,6 +10,7 @@ import MarketplaceContext from "../../store/marketplace-context";
 import Spinner from "../Layout/Spinner";
 import logo from "../../img/logo2.PNG";
 import banner from "../../img/banner.png";
+import bgbg from "../../img/bgbg.png";
 
 const Main = () => {
   const collectionCtx = useContext(CollectionContext);
@@ -43,6 +44,9 @@ const Main = () => {
                   </Heading>
                 </Box>
                 <Box bg="#0d0d0d" my="6" p="10" rounded="xl">
+                  <Heading color="white" fontFamily="Segoe UI Light" p={3}>
+                    Start minting your own NFTs with one click!
+                  </Heading>
                   {!collectionCtx.nftIsLoading && <MintForm />}
                   {collectionCtx.nftIsLoading && <Spinner />}
                 </Box>
@@ -50,8 +54,15 @@ const Main = () => {
             </main>
           </div>
           <hr />
-          {!marketplaceCtx.mktIsLoading && <NFTCollection />}
-          {marketplaceCtx.mktIsLoading && <Spinner />}
+          <Box bgImage={bgbg} my="6" p="10" rounded="xl">
+            <Heading size="xl" color="white" fontFamily="Segoe UI Light">
+              Beta Drop
+            </Heading>
+          </Box>
+          <Box bg="#0d0d0d" my="6" p="10" rounded="xl">
+            {!marketplaceCtx.mktIsLoading && <NFTCollection />}
+            {marketplaceCtx.mktIsLoading && <Spinner />}
+          </Box>
         </div>
       </Flex>
     </>

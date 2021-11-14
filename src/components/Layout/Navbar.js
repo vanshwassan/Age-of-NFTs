@@ -4,6 +4,8 @@ import { Flex, Spacer } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import logo from "../../img/logo2.PNG";
+import { BsGithub, BsDiscord } from "react-icons/bs";
+import { Heading } from "@chakra-ui/layout";
 
 import Web3Context from "../../store/web3-context";
 import MarketplaceContext from "../../store/marketplace-context";
@@ -76,6 +78,23 @@ const Navbar = () => {
             className="mb-2"
           />
         </Box>
+        <Box p={5}>
+          <a href="https://github.com/vanshwassan/Age-of-NFTs">
+            <BsGithub color="white" size="35px" />
+          </a>
+        </Box>
+        <Box p={5}>
+          <a href="https://discord.gg/">
+            <BsDiscord color="white" size="35px" />
+          </a>
+        </Box>
+        <Box p={5}>
+          <a href="https://github.com/vanshwassan/Age-of-NFTs">
+            <Button colorScheme="teal" variant="solid">
+              User Profile
+            </Button>
+          </a>
+        </Box>
         <ul className="navbar-nav ms-auto">
           <li className="nav-item">
             {marketplaceCtx.userFunds > 0 && !fundsLoading && (
@@ -95,7 +114,6 @@ const Navbar = () => {
               </div>
             )}
           </li>
-
           <li className="nav-item">
             {web3Ctx.account && (
               <Box w="100%" p={4}>
